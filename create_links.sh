@@ -30,3 +30,6 @@ ln mangohud/$name/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
 
 echo "sway"
 ln sway/$name/config ~/.config/sway/config
+
+echo "fuzzel"
+ln fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel.ini
