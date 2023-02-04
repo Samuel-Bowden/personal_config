@@ -1,0 +1,17 @@
+theme = "nord"
+
+[keys.normal]
+n = "move_char_left"
+i = "move_char_right"
+o = "move_line_up"
+e = "move_line_down"
+h = "move_next_word_end"
+u = "insert_mode"
+j = "undo"
+J = "redo"
+k = "open_below"
+K = "open_above"
+"space" = { w = { n = "jump_view_left", i = "jump_view_right", o = "jump_view_up", e = "jump_view_down" } }
+
+[editor]
+line-number = "relative"
