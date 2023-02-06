@@ -94,12 +94,13 @@
 		bindsym $mod+minus scratchpad show
 
 	# Workspace renaming
-	bindsym $mod+u exec ~/.local/bin/sway_workspace_add_description
-	bindsym $mod+p exec ~/.local/bin/sway_workspace_remove_description
+	bindsym $mod+u exec pop_up workspace_add_description
+	bindsym $mod+p exec workspace_remove_description
 
 	# Power
 	bindsym $mod+Shift+b exec shutdown now
 	bindsym $mod+Shift+k exec 'swaylock & systemctl suspend'
+	bindsym $mod+Shift+v exec pop_up battery_charge_limiter
 
 	# Audio
 	bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
@@ -156,6 +157,8 @@
 	output eDP-1 pos 0 1080
 
 	font pango:Noto 11
+
+	for_window [title="sway-pop-up"] floating enable
 
 
 # Run additional scripts provided by sway

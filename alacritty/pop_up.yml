@@ -1,0 +1,14 @@
+font:
+  size: 14.0
+
+window:
+  padding:
+    x: 20
+    y: 20
+  dimensions:
+    columns: 50
+    lines: 10
+
+colors:
+  primary:
+    background: '#000000'
