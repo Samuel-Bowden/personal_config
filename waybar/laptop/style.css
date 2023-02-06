@@ -1,0 +1,40 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Noto;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #000000;
+    color: #d8dee9;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+}
+
+#workspaces button.focused {
+    background: #4c566a;
+}
+
+#network,
+#memory,
+#pulseaudio,
+#battery,
+#clock,
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#cpu {
+    padding-left: 10px;
+}
+
+#temperature {
+    padding-right: 10px;
+}

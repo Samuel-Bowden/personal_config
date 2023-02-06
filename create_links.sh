@@ -19,17 +19,21 @@ esac
 
 echo "Creating links for $name profile:"
 
-echo "alacritty"
-ln alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+echo "Alacritty:"
+ln -v alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
-echo "helix"
-ln helix/config.toml ~/.config/helix/config.toml
+echo "Helix:"
+ln -v helix/config.toml ~/.config/helix/config.toml
 
-echo "mangohud"
-ln mangohud/$name/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
+echo "Mangohud:"
+ln -v mangohud/$name/MangoHud.conf ~/.config/MangoHud/MangoHud.conf
 
-echo "sway"
-ln sway/$name/config ~/.config/sway/config
+echo "Sway:"
+ln -v sway/$name/config ~/.config/sway/config
 
-echo "fuzzel"
-ln fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel.ini
+echo "Fuzzel:"
+ln -v fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel.ini
+
+echo "Waybar:"
+ln -v waybar/$name/config.json ~/.config/waybar/config
+ln -v waybar/$name/style.css ~/.config/waybar/style.css

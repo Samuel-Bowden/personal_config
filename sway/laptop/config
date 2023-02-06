@@ -26,7 +26,7 @@
 	bindsym $mod+Return exec $term
 
 	# Browser
-	bindsym $mod+f exec librewolf -P private -private-window
+	bindsym $mod+f exec librewolf -P private
 	bindsym $mod+u exec librewolf -P public
 
 	# Screenshots
@@ -141,7 +141,7 @@
 		client.background       #ffffff
 
 		# class                 border  backgr. text    indicator child_border
-		client.focused          #000000 #222222 #ffffff #d8dee9   #d8dee9
+		client.focused          #000000 #000000 #ffffff #000000   #000000
 		client.focused_inactive #000000 #000000 #ffffff #484e50   #5f676a
 		client.unfocused        #000000 #000000 #ffffff #292d2e   #222222
 		client.urgent           #2f343a #900000 #ffffff #900000   #900000

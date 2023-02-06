@@ -1,0 +1,69 @@
+{
+  "layer": "top",	
+  "position": "bottom",
+  "height": 30,
+
+  "modules-left": [
+    "sway/workspaces",
+  ],
+
+  "modules-right": [
+    "network",
+    "memory",
+    "cpu",
+    "temperature",
+    "pulseaudio",
+    "battery",
+    "clock",
+    "tray",
+  ],
+  
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": "{essid}: {signalStrength}%",
+    "format-ethernet": "{ifname}",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}"
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "Mem: {used:0.2f}GiB/{total:0.2f}GiB",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "CPU: {usage:3}%",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+
+  "temperature": {
+    "critical-threshold": 70,
+    "interval": 5,
+    "format": " | {temperatureC}°C",
+  },
+
+  "pulseaudio": {
+    "format": "Audio: {volume}%",
+  },
+
+  "battery": {
+    "states": {
+		  "good": 95,
+			"warning": 15,
+			"critical": 10,
+		},
+		"format": "BAT0: {capacity}%",
+  },
+}
