@@ -21,6 +21,12 @@ case $profile in
     ;;
 esac
 
+echo "Ensuring config directories exist:"
+mkdir -p ~/.config
+cd ~/.config
+mkdir -p alacritty helix MangoHud sway/bin fuzzel waybar fish/functions nvim
+cd -
+
 echo "Creating links for $name profile:"
 
 echo "Alacritty:"
@@ -49,3 +55,15 @@ ln -v fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel.ini
 echo "Waybar:"
 ln -v waybar/$name/config.json ~/.config/waybar/config
 ln -v waybar/$name/style.css ~/.config/waybar/style.css
+
+echo "Fish:"
+ln -v fish/config.fish ~/.config/fish/config.fish
+ln -v fish/fish_variables ~/.config/fish/fish_variables
+ln -v fish/functions/fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+ln -v fish/functions/nv.fish ~/.config/fish/functions/nv.fish
+
+echo "Neovim:"
+ln -v nvim/init.lua ~/.config/nvim/init.lua
+ln -v nvim/filetype.vim ~/.config/nvim/filetype.vim
+ln -vs $PWD/nvim/lua ~/.config/nvim/lua
+ln -vs $PWD/nvim/syntax ~/.config/nvim/syntax
