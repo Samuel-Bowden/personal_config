@@ -32,8 +32,8 @@ return require('packer').startup(function()
 				close_if_last_window = true,
 				filesystem = {
 					filtered_items = {
-						hide_gitignored = true,
-						hide_dotfiles = true,
+						hide_gitignored = false,
+						hide_dotfiles = false,
 					}
 				}
 			})

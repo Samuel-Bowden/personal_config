@@ -3,7 +3,6 @@
 # Startup:
 	exec wl-paste -t text --watch clipman store --no-persist
 
-
 # Quick Settings:
 	# Hide cursor when typing (can break some games)
 	seat * hide_cursor when-typing enable
@@ -26,8 +25,7 @@
 	bindsym $mod+Return exec $term
 
 	# Browser
-	bindsym $mod+f exec librewolf -P private
-	bindsym $mod+j exec librewolf -P public
+	bindsym $mod+f exec librewolf 
 
 	# Screenshots
 	bindsym $mod+g exec grim ~/pictures/screenshot.png
@@ -86,6 +84,7 @@
 		bindsym $mod+t fullscreen
 
 		# Floating/Tiling
+    floating_modifier $mod normal
 		bindsym $mod+Shift+space floating toggle
 		bindsym $mod+space focus mode_toggle
 
@@ -108,8 +107,8 @@
 	bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle    
 
 	# Brightness
-	bindsym --locked XF86MonBrightnessDown exec light -U 1
-	bindsym --locked XF86MonBrightnessUp exec light -A 1
+	bindsym --locked XF86MonBrightnessDown exec brightnessctl set 1-
+	bindsym --locked XF86MonBrightnessUp exec brightnessctl set +1
 
 	# Other
 	bindsym $mod+Shift+r exec swaynag -t warning -m 'Am I sure I want to exit?' -b 'Yes' 'swaymsg exit'
